@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+body {
+  background: #fff;
+}
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+}
+section {
+  scroll-snap-align: 10vh;
+}
+nav {
+  height: 10vh;
+  padding-top: 10px;
+  border-bottom: 1px black solid;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 20px;
+  padding-left: 30px;
+}
+.nav-items {
+  margin-right: 20px;
+  padding-right: 30px;
+}
+button {
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+button.login {
+  background-color: green;
+  visibility: hidden;
+}
+button.signup {
+  background-color: red;
+  visibility: hidden;
+}
+button.login:hover {
+  background-color: black;
+}
+button.signup:hover {
+  background-color: black;
+}
+button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px;
+}
+.land {
+  height: 65vh;
+  margin: 0px 20px;
+  padding: 0px 30px;
+}
+.land h1 {
+  margin-top: 180px;
+  font-size: 125px;
+  font-weight: 800;
+}
+.land span {
+  color: black;
+}
+.land p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.land .arrow {
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+.arrow svg {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.arrow svg:hover {
+  transform: rotate(270deg);
+  border: black 1px solid;
+}
+.editor {
+  height: 100vh;
+  margin: 0px 20px;
+  padding: 20px 30px 20px 30px;
+}
+/*ace*/
+.ace_editor,
+.ace_editor * {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", "Droid Sans Mono", "Consolas",
+    monospace !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+#ide-parent {
+  width: 90%;
+  height: 90vh;
+  border-radius: 1em;
+  overflow: hidden;
+  margin: 40px auto 0px auto;
+  box-shadow: 0 0 10px 1px rgba(5, 3, 3, 0.2);
+  border: 1px solid black;
+  border-top: none;
+}
+#button-wrapper {
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+#button-wrapper button {
+  width: 25%;
+  border: none;
+  border: 1px solid black;
+  background: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 23px;
+  outline: none;
+  transition-duration: 300ms;
+}
+#button-wrapper button:hover {
+  background: #000e1b;
+  color: #fff;
+}
+#ide-container {
+  width: 100%;
+  height: 89%;
+  overflow: auto;
+}
+.panel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#html {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#css {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#js {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: none;
+}
+
+.ace-dracula {
+  background-color: #162447 !important;
+}
+
+.ace-dracula .ace_gutter {
+  background: #162447 !important;
+}
+
+.ace_scrollbar-h {
+  scrollbar-color: gray black !important;
+  scrollbar-width: thin !important;
+  cursor: pointer;
+}
+
+.ace_scrollbar-v {
+  scrollbar-color: gray black !important;
+  scrollbar-width: thin !important;
+  cursor: pointer;
+}
+
+.ace_scrollbar-h::-webkit-scrollbar {
+  border: none;
+  height: 0.6em;
+}
+
+.ace_scrollbar-h::-webkit-scrollbar-thumb {
+  background: #000;
+  border: none;
+}
+
+.ace_scrollbar-h::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
+.ace_scrollbar-h::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ace_scrollbar-v::-webkit-scrollbar {
+  border: none;
+  width: 0.6em;
+}
+
+.ace_scrollbar-v::-webkit-scrollbar-thumb {
+  background: gray;
+  border: none;
+}
+
+.ace_scrollbar-v::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+.ace_scrollbar-v::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+footer {
+  width: 100wh;
+  height: 70vh;
+}
+
+footer svg {
+  width: 100%;
+}
+.footer-row {
+  margin: 0px 20px;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+footer li {
+  list-style: none;
+  padding-top: 15px;
+}
+footer a {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+footer a:hover {
+  border: 1px solid gray;
+  background-color: black;
+  color: white;
+  transition: 1ms ease-in;
+}
+footer h2 {
+  border-bottom: 2px solid black;
+}
+input {
+  border: 2px black solid;
+  width: 300px;
+  height: 45px;
+  border-radius: 15px;
+}
+input::placeholder {
+  padding-left: 10px;
+  letter-spacing: 2px;
+}
+footer button {
+  height: 45px;
+  border-radius: 15px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+}
+.support {
+  height: 45px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 2px black solid;
+}
+.support:hover {
+  background-color: black;
+  color: white;
+  transition: 200ms ease-in;
+}
+.input-field {
+  margin-bottom: 20px;
+}
+.other {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+.other h4 {
+  margin-top: 40px;
+  font-size: 30px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.other h4:hover {
+  text-decoration: underline;
+  transition: 2s ease-in-out;
+}
+
+/*
+For mobile screen
+*/
+@media screen and (max-width: 600px) {
+  .logo {
+    margin-left: 10;
+    padding-left: 0;
+  }
+  .nav-items {
+    margin-right: 10;
+    padding-right: 0;
+  }
+  button {
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+  }
+  .land {
+    height: 65vh;
+    margin: 0px 10px;
+    padding: 0px 0px;
+  }
+  .land h1 {
+    margin-top: 110px;
+    font-size: 35px;
+    font-weight: 700;
+  }
+  .land p {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .land .arrow {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+  }
+  .arrow svg {
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.7s ease-in-out;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  .arrow svg:hover {
+    transform: rotate(270deg);
+    border: black 1px solid;
+  }
+  .editor {
+    height: 100vh;
+    padding: 5px 0px 0px 0px;
+  }
+  /*ace*/
+  .ace_editor,
+  .ace_editor * {
+    font-size: 12px !important;
+  }
+  #ide-parent {
+    width: 100%;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+  }
+  #button-wrapper button {
+    font-size: 15px;
+  }
+  .footer-row {
+    margin: 0px 0px;
+    padding: 0px 10px;
+    flex-direction: column;
+  }
+  footer h2 {
+    border-bottom: none;
+    padding-top: 20px;
+  }
+  .other {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+  }
+  .input-field {
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ledit Code Editor</title>
+    <meta
+      name="description"
+      content="This is an online code editor for html css and javascript. "
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Iruthaya Santhose I" />
+    <meta
+      name="keywords"
+      content="Web Developing Tool, On the go, Live code editor, online code editor, live html editor, live css editor, live javascript editor"
+    />
+    <!--LINKS-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <section>
+        <nav>
+          <div class="logo">
+            <h2>Ledit</h2>
+          </div>
+          <div class="nav-items">
+            <button class="login"><a href="#">Log in</a></button>
+            <button class="signup"><a href="#">Sign up</a></button>
+          </div>
+        </nav>
+      </section>
+      <section class="land">
+        <h1>"You can <span class="typed2"></span></h1>
+        <p>
+          With the help of me, you can note down your inspirations and ideas for
+          your website and can code for <br />
+          your project and can see the results with an ease of time.
+        </p>
+        <p>< !-- Without switching between apps. -- ></p>
+        <div class="arrow">
+          <a href="#code-editor"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="77.264"
+              height="77.264"
+              viewBox="0 0 77.264 77.264"
+            >
+              <defs>
+                <pattern
+                  id="pattern"
+                  preserveAspectRatio="none"
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 48 48"
+                >
+                  <image
+                    width="48"
+                    height="48"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAVklEQVRYw+3PsQ0AEABE0StspzCKUQxiSAoJUalORP4N8H5OYq8vK3v5puZLDN6WiJM3JYIqCRIkSJAgcVzZAgUeHh4e/lM+efn9gYVfCRs/Elae3VgHdE8ChKMWUvAAAAAASUVORK5CYII="
+                  />
+                </pattern>
+              </defs>
+              <rect
+                id="outline_arrow_forward_ios_black_24dp"
+                width="75.95"
+                height="75.95"
+                rx="37.975"
+                transform="translate(77.264 1.326) rotate(91)"
+                fill="url(#pattern)"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+      <section id="code-editor" class="editor">
+        <div id="ide-parent">
+          <div id="button-wrapper">
+            <button onclick="switchPanel(0)">HTML</button>
+            <button onclick="switchPanel(1)">CSS</button>
+            <button onclick="switchPanel(2)">js</button>
+            <button onclick="runEdit(3)">Result</button>
+          </div>
+          <div id="ide-container">
+            <div class="panel-wrapper">
+              <div id="html">&lt;!--Put your HTML here--&gt;</div>
+            </div>
+            <div class="panel-wrapper">
+              <div id="css">/*Put your CSS here*/</div>
+            </div>
+            <div class="panel-wrapper">
+              <div id="js">//Put your JS here</div>
+            </div>
+            <div class="panel-wrapper">
+              <iframe id="result"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <footer>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1920.301"
+            height="121.259"
+            viewBox="0 0 1920.301 121.259"
+          >
+            <path
+              id="Path_1"
+              data-name="Path 1"
+              d="M0,6,580.25-80.2,1211.58,38.031,1920,0"
+              transform="translate(0.22 81.721)"
+              fill="none"
+              stroke="#707070"
+              stroke-width="3"
+            />
+          </svg>
+          <div class="footer-row">
+            <div class="our-products">
+              <h2>Our Products</h2>
+              <ul>
+                <li><a href="#">Word Hunter</a></li>
+                <li><a href="#">Type Faster</a></li>
+                <li><a href="#">Offline Todo</a></li>
+                <li><a href="#">Online Todo</a></li>
+              </ul>
+            </div>
+            <div class="about">
+              <h2>About</h2>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Office</a></li>
+              </ul>
+            </div>
+            <div class="social">
+              <h2>Social</h2>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+              </ul>
+            </div>
+            <div class="other">
+              <div class="input-field">
+                <input type="text" placeholder="Subscribe to our newletter" />
+                <button>Send</button>
+              </div>
+              <button class="support">Support</button>
+              <h4>
+                Have any ideas, <br />
+                Let's collaborate!
+              </h4>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.11/ace.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/typed.js"></script>
+    <script>
+      var typed = new Typed(".typed2", {
+        strings: ["Note...", "Code...", "Save..."],
+        typeSpeed: 100,
+        backSpeed: 70,
+        loop: false,
+      });
+    </script>
+  </body>
+</html>
