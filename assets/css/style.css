@@ -302,6 +302,7 @@ footer button {
   transition: 200ms ease-in;
 }
 .input-field {
+  display: none;
   margin-bottom: 20px;
 }
 .other {
@@ -404,5 +405,6 @@ For mobile screen
   .input-field {
     display: flex;
     justify-content: space-around;
+    display: none;
   }
 }
