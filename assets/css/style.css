@@ -340,13 +340,13 @@ For mobile screen
     cursor: pointer;
   }
   .land {
-    height: 65vh;
+    height: 50vh;
     margin: 0px 10px;
     padding: 0px 0px;
   }
   .land h1 {
     margin-top: 110px;
-    font-size: 35px;
+    font-size: 37px;
     font-weight: 700;
   }
   .land p {
